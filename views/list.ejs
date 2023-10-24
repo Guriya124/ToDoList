@@ -1,0 +1,32 @@
+<%- include('particals/header.ejs') %>
+
+
+<div class="heading">
+    <h1> <%=ListTitle%> </h1>
+
+</div>
+
+<div class="box">
+    <% for (let item of newIteams) { %>
+    <div class="item">
+        <input type="checkbox">
+        <p><%= item %></p>
+    </div>
+    <% } %>
+
+
+    <form action="/" method="post">
+        <input type="text" name="newIteams" placeholder="Add item" autocomplete="off">
+        <button type="submit" value=<%=  ListTitle %>> +</button>
+
+    </form>
+
+
+
+</div>
+
+
+
+
+
+<%- include('particals/footer.ejs') %>
